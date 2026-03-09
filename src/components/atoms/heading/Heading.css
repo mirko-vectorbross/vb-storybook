@@ -1,0 +1,84 @@
+/**
+ * Heading Component
+ * Source: VB Bolt Basic Theme — Figma variables (node 4179-8581)
+ * Font: Poppins SemiBold (weight 600) for all heading levels
+ * letter-spacing: -4% for H1→H4, -2% for H5→H6
+ */
+
+.heading {
+  --heading-font-family: 'Poppins', sans-serif;
+  --heading-font-weight: 600;
+  --heading-line-height: 1.1;
+  --heading-color-default: #000000;
+  --heading-color-brand: #004cff;
+
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  font-style: normal;
+  line-height: var(--heading-line-height);
+  color: var(--heading-color-default);
+  margin: 0;
+}
+
+/* --- Niveaux (valeurs exactes des variables Figma) --- */
+
+/* H1 Home — Hero homepage */
+.heading--level-1.heading--home {
+  font-size: 4.5rem;        /* 72px — Figma: Font Sizes/Heading 1 Home */
+  letter-spacing: -0.04em;  /* -4% */
+}
+
+/* H1 — Titre principal de page */
+.heading--level-1 {
+  font-size: 4rem;           /* 64px — Figma: Headling/h1/Font Size */
+  letter-spacing: -0.04em;  /* -4% */
+}
+
+/* H2 Home — Titre hero secondaire */
+.heading--level-2.heading--home {
+  font-size: 3.5rem;         /* 56px — Figma: Headling/h2 Home/Font Size */
+  letter-spacing: -0.04em;
+}
+
+/* H2 — Titre de section */
+.heading--level-2 {
+  font-size: 3rem;           /* 48px — Figma: Headling/h2/Font Size */
+  letter-spacing: -0.04em;
+}
+
+/* H3 — Sous-titre de section */
+.heading--level-3 {
+  font-size: 2.5rem;         /* 40px — Figma: Headling/h3/Font Size */
+  letter-spacing: -0.04em;
+}
+
+/* H4 — Titre de card / Testimonial */
+.heading--level-4 {
+  font-size: 2rem;           /* 32px — Figma: Headling/h4/Font Size */
+  letter-spacing: -0.04em;
+}
+
+/* H5 — Petit titre de section */
+.heading--level-5 {
+  font-size: 1.5rem;         /* 24px — Figma: Headling/h5/Font Size */
+  letter-spacing: -0.02em;
+}
+
+/* H6 — Label heading / Step title */
+.heading--level-6 {
+  font-size: 1.25rem;        /* 20px — Figma: Headling/h6/Font Size */
+  letter-spacing: -0.02em;
+}
+
+/* --- Couleurs --- */
+.heading--brand {
+  color: var(--heading-color-brand);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .heading--level-1      { font-size: 3rem; }
+  .heading--level-2      { font-size: 2.25rem; }
+  .heading--level-3      { font-size: 2rem; }
+  .heading--level-4      { font-size: 1.75rem; }
+}

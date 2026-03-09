@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Heading component.
+ *
+ * Props:
+ *   - text: The heading text content.
+ *   - level: The visual heading level (1–6), controls font size and weight.
+ *   - color: Color variant — "default" (black) or "brand" (#004cff).
+ *   - html_tag_override: Optional — override the HTML tag independently from
+ *     the visual level. Useful for SEO/accessibility (e.g. visual H3 but
+ *     semantic H2).
+ *
+ * Usage example:
+ *   {% include 'mytheme:heading' with {
+ *     props: {
+ *       text: 'Our Services',
+ *       level: 2,
+ *       color: 'default',
+ *     }
+ *   } %}
+ */
+#}
+
+{%- set tag = props.html_tag_override ?: ('h' ~ props.level) -%}
+{%- set color_modifier = props.color and props.color != 'default' ? 'heading--' ~ props.color : '' -%}
+
+<{{ tag }}{{ create_attribute({
+  'class': [
+    'heading',
+    'heading--level-' ~ props.level,
+    color_modifier,
+  ]|filter
+}) }}>
+  {{- props.text -}}
+</{{ tag }}>

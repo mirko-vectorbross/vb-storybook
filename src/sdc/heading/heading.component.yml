@@ -1,0 +1,37 @@
+$schema: 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+name: Heading
+status: experimental
+group: VB Bolt Components
+
+props:
+  type: object
+  required:
+    - text
+    - level
+  properties:
+    text:
+      type: string
+      title: Heading text
+      description: The text content of the heading.
+    level:
+      type: integer
+      title: Heading level
+      description: The HTML heading level (1 to 6).
+      enum: [1, 2, 3, 4, 5, 6]
+      default: 2
+    color:
+      type: string
+      title: Color variant
+      description: Color variant for the heading.
+      enum: [default, brand]
+      default: default
+    html_tag_override:
+      type: string
+      title: HTML tag override
+      description: Override the HTML tag independently from the visual style (e.g. render an h3 visually but semantically use h2).
+      enum: [h1, h2, h3, h4, h5, h6]
+
+libraryOverrides:
+  css:
+    component:
+      heading.css: {}
